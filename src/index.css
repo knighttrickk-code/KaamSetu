@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-cream text-slate-800 font-sans antialiased; -webkit-tap-highlight-color: transparent; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-base font-semibold transition active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none; min-height: 48px; }
+  .btn-primary { @apply btn bg-saffron text-white hover:bg-saffron-600 shadow-sm; }
+  .btn-teal { @apply btn bg-teal text-white hover:bg-teal-700; }
+  .btn-outline { @apply btn border-2 border-teal text-teal bg-white hover:bg-teal-50; }
+  .btn-ghost { @apply btn text-teal hover:bg-teal-50; }
+  .card { @apply bg-white rounded-3xl shadow-card; }
+  .input { @apply w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-base outline-none focus:border-saffron; min-height: 48px; }
+  .label { @apply flex items-center gap-2 text-sm font-semibold text-teal mb-1.5; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium border; }
+  .chip-on { @apply chip bg-teal text-white border-teal; }
+  .chip-off { @apply chip bg-white text-slate-700 border-slate-200; }
+  .skeleton { @apply animate-pulse bg-slate-200 rounded-xl; }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.leaflet-container { font-family: inherit; }
+.emoji-pin { background: transparent; border: none; }
+input[type=range] { accent-color: #E8772E; height: 32px; }
